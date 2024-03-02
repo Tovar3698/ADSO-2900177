@@ -1,3 +1,2 @@
-Listar nuestras configuraciones globales de Git
-        git config -l
+Listar nuestras configuraciones globales de Git git config -l
 
