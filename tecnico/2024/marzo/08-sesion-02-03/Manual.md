@@ -368,8 +368,7 @@ Un archivo .md es un archivo de texto plano que utiliza Markdown, un lenguaje de
   - Para insertar imagenes, es similar a la de enlace 
 
 
-    !![MIA](imagen/mia.jpg)
-   
+    ![el patito juan](<imagen/el patito juan.jpg>)
    
 
   - para hacer el énfasis: Puedes poner énfasis en palabras o frases utilizando asteriscos (*) o guiones bajos (_) alrededor del
