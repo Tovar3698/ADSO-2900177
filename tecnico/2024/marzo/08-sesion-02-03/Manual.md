@@ -368,7 +368,7 @@ Un archivo .md es un archivo de texto plano que utiliza Markdown, un lenguaje de
   - Para insertar imagenes, es similar a la de enlace 
 
 
-    ![DOS ALMAS]()
+    !![MIA](imagen/mia.jpg)
    
    
 
