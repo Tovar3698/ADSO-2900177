@@ -11,7 +11,6 @@ document.addEventListener('DOMContentLoaded', function() {
 
     console.log("\nBingo");
 
-    // Generar la matriz de bingo
     for (let i = 0; i < 5; i++) {
         let fila = [];
         for (let j = 0; j < 5; j++) {
@@ -24,7 +23,7 @@ document.addEventListener('DOMContentLoaded', function() {
 
     let printResultado = '';
 
-    // Función para generar una tabla
+
     function generarTabla(bingo, condicional) {
         printResultado += '<table class="table"><tr>';
         letras.forEach(letra => {
