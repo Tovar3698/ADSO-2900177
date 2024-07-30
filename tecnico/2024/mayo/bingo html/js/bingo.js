@@ -42,7 +42,7 @@ document.addEventListener('DOMContentLoaded', function() {
         printResultado += '</table>';
     }
 
-    // Tablas con diferentes condicionales
+
     generarTabla(bingo, () => false);
 
     for (let i = 0; i < 5; i++) {
