@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="js/farmacia.js"></script>
+</head>
+<body>
+    <script>
+        let cantidad;
+let respuesta;
+let nombre;
+let eleccion;
+let precioUni = [];
+let precio;;
+let factura = [];
+nombre = prompt("Ingrese su Nombre:");
+respuesta = -1
+while(respuesta <1 || respuesta >2){
+    respuesta=prompt("Ingrese su molestia: "+nombre+"\n"+"Elija (1/2)"+"\n"+"1. Dolor de cabeza"+"\n"+"2. Dolor de espalda");
+
+    if (respuesta==1){
+
+        eleccion=-1;
+        while(eleccion<1 || eleccion>3){
+            eleccion=prompt("Elija el medicamento recomendado para su dolor de cabeza"+"\n"+"Elija(1/2/3)"+"\n"+"1. Acetaminofen"+"\n"+"2. Paracetamol"+"\n"+"3. Ibuprufeno");
+            if(eleccion==1){
+                alert("El costo por unidad del acetaminofen es de 300 pesos");
+                cantidad=prompt("Ingrese la cantidad de acetaminafen que va a llevar: ");
+                precio = cantidad *300;
+                precioUni.push([precio]);
+                factura.push([cantidad+"|"+ " Acetominafen "+"|"+precio+"\n"]);
+            }else if(eleccion==2){
+                alert("El costo por unidad del paracetamol es de 200 pesos");
+                cantidad=prompt("Ingrese la cantidad de paracetamol que va a llevar: ");
+                precio = cantidad*200;
+                precioUni.push([precio]);
+                factura.push([cantidad+"|"+ " Paracetamol "+"|"+precio]);
+
+            }else if(eleccion==3){
+                alert("El costo por unidad del ibuprufeno es de 400 pesos");
+                cantidad=prompt("Ingrese la cantidad de ibuprufeno que va a llevar: ");
+                precio = cantidad*400;
+                precioUni.push([precio]);
+                factura.push([cantidad+"|"+ " Ibuprufeno "+"|"+precio]);
+            }else{
+                alert("Ingrese una opcion valida");
+            }
+        }
+
+    }else if(respuesta==2){
+        eleccion=-1;
+
+        while(eleccion<1 || eleccion>3){
+            eleccion=prompt("Elija el medicamento rescomendado para su dolor de cabeza"+"\n"+"Elija(1/2/3)"+"\n"+"1. Xreydol"+"\n"+"2. Lumbal"+"\n"+"3. Duraflex");
+            if(eleccion==1){
+                alert("El costo por unidad del Xreydol es de 2000 pesos");
+                cantidad=prompt("Ingrese la cantidad de Xreydol que va a llevar: ");
+                precio = cantidad*2000;
+                precioUni.push([precio]);
+                factura.push([cantidad+"|"+ " Xreydol "+"|"+precio+"\n"]);
+
+            }else if(eleccion==2){
+                alert("El costo por unidad del Lumbal es de 2700 pesos");
+                cantidad=prompt("Ingrese la cantidad de Lumbal que va a llevar: ");
+                precio = cantidad*2700;
+                precioUni.push([precio]);
+                factura.push([cantidad+"|"+ " Lumbal "+"|"+precio+"\n"]);
+            }else if(eleccion==3){
+                alert("El costo por unidad del Duraflex es de 2800 pesos");
+                cantidad=prompt("Ingrese la cantidad de Duraflex que va a llevar: ");
+                precio = cantidad*2800;
+                precioUni.push([precio]);
+                factura.push([cantidad+"|"+ " Duraflex "+"|"+precio+"\n"]);
+            }else{
+                alert("Ingrese una opcion valida");
+            }
+        }
+        
+    }else{
+        alert("Ingrese una opcion valida");
+    }
+    let mas = prompt("Desea comprar mas productos"+"\n"+"Elija (si/no)");
+    if(mas=="si"){
+        respuesta=-1
+
+    }else if (mas=="no"){
+        let precioTotal=0;
+        for (let i = 0; i < precioUni.length; i++) {
+            precioTotal += precioUni[i];
+        }
+        
+        alert("FACTURA FARMACIA"+"\n"+"CANTIDAD | NOMBRE | PRECIO"+"\n"+factura+"\n"+"|"+"TOTAL: "+precioTotal)
+
+    }else{
+        alert("Ingrese una opcion valida");
+    }
+}
+
+
+    </script>
+</body>
+</html>
